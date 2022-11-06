@@ -1,0 +1,2 @@
+!function(){document.querySelector(".dropbtn");var o=document.querySelector(".dropdown-content");document.querySelector(".dropdown");window.addEventListener("click",(function(e){if(o.classList.toggle("show"),!e.target.classList.contains("dropbtn")){var t=document.getElementsByClassName("dropdown-content");console.log(t);for(var n=0;n<t.length;n++){var s=t[n];console.log(s),s.classList.contains("show")&&s.classList.remove("show")}}}))}();
+//# sourceMappingURL=index.579f5dab.js.map

@@ -1,2 +1,0 @@
-document.querySelector(".dropbtn");const o=document.querySelector(".dropdown-content");document.querySelector(".dropdown");window.addEventListener("click",(function(e){if(o.classList.toggle("show"),!e.target.classList.contains("dropbtn")){o.classList.remove("show");const e=document.getElementsByClassName("dropdown-content");console.log(e);for(let o=0;o<e.length;o++){let t=e[o];console.log(t),t.classList.contains("show")&&t.classList.remove("show")}}}));
-//# sourceMappingURL=index.8e87b198.js.map
