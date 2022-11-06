@@ -9,7 +9,6 @@ window.addEventListener('click', onClick);
 function onClick(event) {
   dropdownContent.classList.toggle('show');
   if (!event.target.classList.contains('dropbtn')) {
-    dropdownContent.classList.remove('show');
     const dropdowns = document.getElementsByClassName('dropdown-content');
     console.log(dropdowns);
 
