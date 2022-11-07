@@ -1,24 +1,41 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
   <head>
     <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Homework 10</title>
-  </head>
-  <body>
-    <div class="dropdown">
-      <button class="dropbtn">Genres</button>
-      <div id="myDropdown" class="dropdown-content">
-        <a href="">Comedy</a>
-        <a href="">Drama</a>
-        <a href="">Fantastic</a>
-        <a href="">Fantastic</a>
-        <a href="">Fantastic</a>
-        <a href="">Fantastic</a>
-      </div>
-    </div>
 
-    <script src="index.js" type="module"></script>
+    <title>Filmoteca</title>
+    <link rel="icon" type="image/x-icon" href="./images/film_icon_1x_mob.png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@500&family=Raleway:wght@700&family=Roboto:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./sass/index.scss" />
+  </head>
+
+  <body>
+    <!-- ❗️❗️❗️ Add partials like so for every page -->
+
+    <include src="./partials/header.html"></include>
+
+    <main>
+      <include src="./partials/containerMainPage.html"></include>
+
+      <!-- <include src="./partials/example.html"></include> -->
+
+      <include src="./partials/modalCardFilmAnna.html"></include>
+      <include src="./partials/modalTeam.html"></include>
+      <include src="./partials/movieCardModalAndriy.html"></include>
+      <include src="./partials/paginationPage.html"></include>
+    </main>
+
+    <include src="./partials/footer.html"></include>
+    <include src="./partials/team.html"></include>
+
+    <include src="./partials/scriptFiles.html"></include>
+
+    <script type="module" src="./index.js"></script>
   </body>
 </html>
