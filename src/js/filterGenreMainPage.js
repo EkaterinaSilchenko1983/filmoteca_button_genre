@@ -16,6 +16,7 @@ window.addEventListener('click', onClick);
 function onClick(event) {
   event.preventDefault();
   dropdownContent.classList.toggle('show');
+
   if (!event.target.classList.contains('dropbtn')) {
     const dropdowns = document.getElementsByClassName('dropdown-content');
     console.log(dropdowns);
@@ -28,6 +29,7 @@ function onClick(event) {
       }
     }
   }
+  renderGenres();
 }
 
 async function renderGenres(genres) {
