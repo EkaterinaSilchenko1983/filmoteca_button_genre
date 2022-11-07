@@ -1,60 +1,83 @@
-.dropbtn {
-  margin-bottom: 5px;
-  width: 152px;
-  height: 44px;
-  border-radius: 5px;
-  border: 1px solid rgb(208, 66, 66);
-  background: rgba(0, 0, 0, 0);
-  color: rgb(226, 32, 32);
-  text-transform: uppercase;
+// .dropbtn {
+//   margin-bottom: 5px;
+//   width: 152px;
+//   height: 44px;
+//   border-radius: 5px;
+//   border: 1px solid rgb(208, 66, 66);
+//   background: rgba(0, 0, 0, 0);
+//   color: rgb(226, 32, 32);
+//   text-transform: uppercase;
 
-  font-size: 12px;
+//   font-size: 12px;
 
-  cursor: pointer;
-}
+//   cursor: pointer;
+// }
 
-.dropbtn:hover,
-.dropbtn:focus {
-  border: 1px solid #ff6b01;
-  background: #ff6b01;
-  box-shadow: 0px 8px 43px rgba(255, 107, 1, 0.6);
-  border-radius: 5px;
-}
+// .dropbtn:hover,
+// .dropbtn:focus {
+//   border: 1px solid #ff6b01;
+//   background: #ff6b01;
+//   box-shadow: 0px 8px 43px rgba(255, 107, 1, 0.6);
+//   border-radius: 5px;
+// }
 
-.dropdown {
-  position: relative;
-  display: block;
-  text-align: center;
-}
+// .dropdown {
+//   position: relative;
+//   display: block;
+//   text-align: center;
+// }
 
-.dropdown-content {
-  display: none;
-  left: 50%;
-  transform: translateX(-50%);
-  position: absolute;
-  background-color: #f1f1f1;
-  opacity: 0.8;
-  width: 152px;
-  height: 100px;
-  overflow-y: scroll;
-  z-index: 1;
-}
+// .dropdown-content {
+//   display: none;
+//   left: 50%;
+//   transform: translateX(-50%);
+//   position: absolute;
+//   background-color: #f1f1f1;
+//   opacity: 0.8;
+//   width: 152px;
+//   height: 100px;
+//   overflow-y: scroll;
+//   z-index: 1;
+// }
 
-.dropdown-content li {
-  color: black;
-  /* width: 152px;
-  height: 44px; */
-  padding: 5px 5px;
-  font-size: 12px;
-  text-decoration: none;
-  text-align: center;
-  display: block;
-}
+// .dropdown-content a {
+//   color: black;
+//   /* width: 152px;
+//   height: 44px; */
+//   padding: 5px 5px;
+//   font-size: 12px;
+//   text-decoration: none;
+//   text-align: center;
+//   display: block;
+// }
 
-.dropdown li:hover {
-  background: #ff6b01;
-}
+// .dropdown a:hover {
+//   background: #ff6b01;
+// }
 
-.show {
-  display: block;
-}
+// .show {
+//   display: block;
+// }
+
+// .dropdown {
+//   margin-bottom: 5px;
+//   width: 152px;
+//   height: 44px;
+//   border-radius: 5px;
+//   border: 1px solid rgb(208, 66, 66);
+//   background: rgba(0, 0, 0, 0);
+//   color: rgb(226, 32, 32);
+//   text-transform: uppercase;
+
+//   font-size: 12px;
+
+//   cursor: pointer;
+// }
+
+// .dropdown:hover,
+// .dropdown:focus {
+//   border: 1px solid #ff6b01;
+//   background: #ff6b01;
+//   box-shadow: 0px 8px 43px rgba(255, 107, 1, 0.6);
+//   border-radius: 5px;
+// }

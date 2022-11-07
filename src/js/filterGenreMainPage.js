@@ -7,28 +7,41 @@ const GENRES_LIST = 'genre/movie/list';
 
 export const genreAPI = new ServerRequest(TRENDING_LIST); // Ініціалізує екземпляр класу для запитів на АРІ. При ініціалізації потрібно передати детальний шлях який додається до базової урли АРІ (БАЗОВА УРЛА ВЖЕ ПРИСУТНЯ В КЛАСІ!!!!!!), та обєкт конфігурацій
 
-const button = document.querySelector('.dropbtn');
+// const button = document.querySelector('.dropbtn');
+// const dropdownContent = document.querySelector('.dropdown-content');
+// const dropdown = document.querySelector('.dropdown');
+
+// window.addEventListener('click', onClick);
+
+// function onClick(event) {
+//   event.preventDefault();
+
+//   dropdownContent.classList.toggle('show');
+
+//   if (!event.target.classList.contains('dropbtn')) {
+//     const dropdowns = document.getElementsByClassName('dropdown-content');
+//     console.log(dropdowns);
+
+//     for (let i = 0; i < dropdowns.length; i++) {
+//       let openDropdown = dropdowns[i];
+//       console.log(openDropdown);
+//       if (openDropdown.classList.contains('show')) {
+//         openDropdown.classList.remove('show');
+//       }
+//     }
+//   }
+//   renderGenres();
+//   console.log(event.target.value);
+// }
+
 const dropdownContent = document.querySelector('.dropdown-content');
 const dropdown = document.querySelector('.dropdown');
 
-window.addEventListener('click', onClick);
+dropdownContent.addEventListener('change', onClick);
 
 function onClick(event) {
   event.preventDefault();
-  dropdownContent.classList.toggle('show');
 
-  if (!event.target.classList.contains('dropbtn')) {
-    const dropdowns = document.getElementsByClassName('dropdown-content');
-    console.log(dropdowns);
-
-    for (let i = 0; i < dropdowns.length; i++) {
-      let openDropdown = dropdowns[i];
-      console.log(openDropdown);
-      if (openDropdown.classList.contains('show')) {
-        openDropdown.classList.remove('show');
-      }
-    }
-  }
   renderGenres();
 }
 
@@ -46,7 +59,8 @@ async function renderGenres() {
 function murkupFilterGenres(genres) {
   return genres.map(genre => {
     console.log(genre.name);
-    return ` <li>${genre.name}</li>`;
+    // return ` <a href="">${genre.name}</a>`;
+    return ` <option>${genre.name}</option>`;
   });
 
   //   dropdownContent.innerHTML = makrupFilterGenre;
