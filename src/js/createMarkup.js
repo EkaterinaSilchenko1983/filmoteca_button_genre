@@ -19,6 +19,7 @@ export async function renderPageMovies(requestAPI = movieAPI) {
     requestAPI.totalMovies = total_results;
 
     const genres = await requestAPI.getGenres(); // Повертає жанри з АРІ
+    console.log(genres);
     const markup = markupMovieCards(results, genres); // Рендерить розмітку для карток
 
     refs.galleryList.innerHTML = markup.join(''); // Додає розмітку в DOM

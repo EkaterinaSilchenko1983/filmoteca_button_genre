@@ -1,6 +1,11 @@
-// import ServerRequest from './serverRequest';
-// import { refs } from './refs';
-// import { markupMovieCards } from './markupMovieCards';
+import ServerRequest from './serverRequest';
+import { refs } from './refs';
+import { markupMovieCards } from './markupMovieCards';
+
+const TRENDING_LIST = 'trending/movie/week'; // Уточнюючий шлях для запиту
+const GENRES_LIST = 'genre/movie/list';
+
+export const genreAPI = new ServerRequest(GENRES_LIST); // Ініціалізує екземпляр класу для запитів на АРІ. При ініціалізації потрібно передати детальний шлях який додається до базової урли АРІ (БАЗОВА УРЛА ВЖЕ ПРИСУТНЯ В КЛАСІ!!!!!!), та обєкт конфігурацій
 
 const button = document.querySelector('.dropbtn');
 const dropdownContent = document.querySelector('.dropdown-content');
@@ -23,4 +28,23 @@ function onClick(event) {
       }
     }
   }
+}
+
+async function renderGenres(genres) {
+  try {
+    const genres = await requestAPI.getGenres();
+    const markup = murkupFilterGenres(genres);
+    refs.dropdownContent.innerHTML = markup.join('');
+  } catch (error) {
+    error.message;
+  }
+}
+
+function murkupFilterGenres(genres) {
+  return genres.map(genre => {
+    console.log(genre.name);
+    return ` <a href="">${genre.name}</a>`;
+  });
+
+  //   dropdownContent.innerHTML = makrupFilterGenre;
 }
