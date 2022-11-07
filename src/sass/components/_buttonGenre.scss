@@ -3,9 +3,9 @@
   width: 152px;
   height: 44px;
   border-radius: 5px;
-  border: 1px solid #ffff;
+  border: 1px solid rgb(208, 66, 66);
   background: rgba(0, 0, 0, 0);
-  color: white;
+  color: rgb(226, 32, 32);
   text-transform: uppercase;
 
   font-size: 12px;
@@ -23,16 +23,18 @@
 
 .dropdown {
   position: relative;
-  display: inline-block;
+  display: block;
+  text-align: center;
 }
 
 .dropdown-content {
   display: none;
-
+  left: 50%;
+  transform: translateX(-50%);
   position: absolute;
   background-color: #f1f1f1;
   opacity: 0.8;
-  min-width: 152px;
+  width: 152px;
   height: 100px;
   overflow-y: scroll;
   z-index: 1;

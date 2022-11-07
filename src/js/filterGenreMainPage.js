@@ -1,6 +1,6 @@
-import ServerRequest from './serverRequest';
-import { refs } from './refs';
-import { markupMovieCards } from './markupMovieCards';
+// import ServerRequest from './serverRequest';
+// import { refs } from './refs';
+// import { markupMovieCards } from './markupMovieCards';
 
 const button = document.querySelector('.dropbtn');
 const dropdownContent = document.querySelector('.dropdown-content');
@@ -9,6 +9,7 @@ const dropdown = document.querySelector('.dropdown');
 window.addEventListener('click', onClick);
 
 function onClick(event) {
+  event.preventDefault();
   dropdownContent.classList.toggle('show');
   if (!event.target.classList.contains('dropbtn')) {
     const dropdowns = document.getElementsByClassName('dropdown-content');
