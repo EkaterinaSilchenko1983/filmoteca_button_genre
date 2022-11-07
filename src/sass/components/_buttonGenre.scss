@@ -40,7 +40,7 @@
   z-index: 1;
 }
 
-.dropdown-content a {
+.dropdown-content li {
   color: black;
   /* width: 152px;
   height: 44px; */
@@ -51,7 +51,7 @@
   display: block;
 }
 
-.dropdown a:hover {
+.dropdown li:hover {
   background: #ff6b01;
 }
 

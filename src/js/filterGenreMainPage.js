@@ -5,7 +5,7 @@ import { markupMovieCards } from './markupMovieCards';
 const TRENDING_LIST = 'trending/movie/week'; // Уточнюючий шлях для запиту
 const GENRES_LIST = 'genre/movie/list';
 
-export const genreAPI = new ServerRequest(GENRES_LIST); // Ініціалізує екземпляр класу для запитів на АРІ. При ініціалізації потрібно передати детальний шлях який додається до базової урли АРІ (БАЗОВА УРЛА ВЖЕ ПРИСУТНЯ В КЛАСІ!!!!!!), та обєкт конфігурацій
+export const genreAPI = new ServerRequest(TRENDING_LIST); // Ініціалізує екземпляр класу для запитів на АРІ. При ініціалізації потрібно передати детальний шлях який додається до базової урли АРІ (БАЗОВА УРЛА ВЖЕ ПРИСУТНЯ В КЛАСІ!!!!!!), та обєкт конфігурацій
 
 const button = document.querySelector('.dropbtn');
 const dropdownContent = document.querySelector('.dropdown-content');
@@ -32,11 +32,12 @@ function onClick(event) {
   renderGenres();
 }
 
-async function renderGenres(genres) {
+async function renderGenres() {
   try {
-    const genres = await requestAPI.getGenres();
+    const genres = await genreAPI.getGenres();
+    console.log(genres);
     const markup = murkupFilterGenres(genres);
-    refs.dropdownContent.innerHTML = markup.join('');
+    dropdownContent.innerHTML = markup.join('');
   } catch (error) {
     error.message;
   }
@@ -45,7 +46,7 @@ async function renderGenres(genres) {
 function murkupFilterGenres(genres) {
   return genres.map(genre => {
     console.log(genre.name);
-    return ` <a href="">${genre.name}</a>`;
+    return ` <li>${genre.name}</li>`;
   });
 
   //   dropdownContent.innerHTML = makrupFilterGenre;
