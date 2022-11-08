@@ -37,11 +37,12 @@ export const genreAPI = new ServerRequest(TRENDING_LIST); // Ініціаліз�
 const dropdownContent = document.querySelector('.dropdown-content');
 const dropdown = document.querySelector('.dropdown');
 
-dropdownContent.addEventListener('change', onClick);
+dropdown.addEventListener('click', onClick);
 
 function onClick(event) {
   event.preventDefault();
-
+  const genre = dropdownContent.options[dropdownContent.selectedIndex].text;
+  console.log(genre);
   renderGenres();
 }
 
