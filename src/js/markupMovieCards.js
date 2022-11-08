@@ -25,7 +25,6 @@ function genresByMovies(genres, genresID) {
   const genresName = genres
     .filter(genre => genresID.includes(genre.id))
     .map(el => el.name);
-  console.log(genresName);
 
   if (genresName.length > 2) {
     // Перевіряє довжину масиву жанрів чи вона більше 2-х
