@@ -38,12 +38,11 @@ const dropdownContent = document.querySelector('.dropdown-content');
 const dropdown = document.querySelector('.dropdown');
 
 dropdown.addEventListener('click', onClick);
-
+renderGenres();
 function onClick(event) {
   event.preventDefault();
-  const genre = dropdownContent.options[dropdownContent.selectedIndex].text;
+  // const genre = dropdownContent.options[dropdownContent.selectedIndex].text;
   console.log(genre);
-  renderGenres();
 }
 
 async function renderGenres() {
